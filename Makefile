@@ -6,3 +6,6 @@ build-docker-streamlit:
 
 run-docker-streamlit:
 	docker run -v ${PWD}/.env:/app/.env -p 8501:8501 streamlit-app:latest
+
+clean-notebook-outputs:
+	jupyter nbconvert --clear-output --inplace notebooks/*.ipynb
